@@ -1,0 +1,828 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+/* Navigation Bar Styles */
+/* General styles for the navigation bar */
+.nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Keep nav on top of other content */
+  color: white;
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.log h1 {
+  color: #F8133c;
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.pages {
+  display: flex;
+  gap: 30px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.pages a {
+  text-decoration: none;
+}
+
+.pages span {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.pages span:hover {
+  color: #F8133c;
+}
+
+.pages .active span {
+  color: #F8133c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sign button {
+  padding: 10px 20px;
+  width: 100px;
+  margin-top: -5px;
+  border: none;
+  background-color: #ff002f;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.sign button:hover {
+  background-color: #e5533d;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sign button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(248, 19, 60, 0.5);
+}
+
+.sign button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .pages {
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Center the menu items vertically */
+    gap: 20px;
+    padding: 20px 0;
+    position: absolute;
+    top: 70px;  /* Ensure the menu starts just below the navbar */
+    left: 50%;
+    transform: translateX(-50%);  /* Center horizontally */
+    width: 100%;  /* Full width of the screen */
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    /* REMOVE z-index here */
+  }
+
+  .pages.open {
+    display: flex;
+    opacity: 1;  /* Fade in the menu */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+}
+
+/* Popular Section */
+.popular {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+}
+
+.popular h1 {
+  text-align: center;
+  color: #F8133c;
+  font-weight: 800;
+}
+
+.popular p {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.main{
+  margin: 9%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 20px;
+}
+.popularcard {
+  height: 500px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.popularcard:hover {
+  transform: scale(1.05);
+}
+
+.popularcard img {
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.popularcard img:hover {
+  transform: scale(1.05);
+}
+
+
+.popularcard h1{
+  margin-top: 10px;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.popularcard p{
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-left: -0px;
+}
+.popularbtn{
+  text-align: center;
+  margin-top: -120px;
+}
+.popularbtn button {
+  color: rgb(255, 255, 255);
+  background-color: #f8133c;
+  padding: 20px;
+  width: 200px;
+  border: none;
+}
+
+.popularbtn button:hover {
+  background-color: #e04461;
+}
+
+/* Choosing Section */
+.barlow-thin {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.content-container {
+  display: flex;
+  max-width: 1200px;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.container1 h1 {
+  margin-left: -10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.196em;
+  color: #000000;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  line-height: 2.5;
+  font-weight: 400;
+  margin-left: 60px;
+}
+
+.contain {
+  display: flex;
+}
+
+.content1 h2 {
+  margin-left: 70px;
+  color: #000000;
+}
+
+.content1 p {
+  margin-left: 70px;
+  line-height: 2;
+  margin-top: -15px;
+}
+
+.main .img1 img {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.choosebtn {
+  background-color: #f8133c;
+  color: #fff;
+  font-size: larger;
+  width: 300px;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 60px;
+  margin-left: 140px;
+}
+
+.choosebtn:hover {
+  background-color: #c40812;
+}
+
+.container2 {
+  flex: 1;
+  position: relative;
+}
+
+.container2 .image1 {
+  position: absolute;
+  left: 0;
+  height: 450px;
+  margin-left: 120px;
+  width: 50%;
+}
+
+.container2 .image2 {
+  left: 50px;
+  width: 50%;
+  height: 450px;
+  margin-left: 320px;
+  margin-top: 250px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Tattoo Artist Page */
+.tattoo {
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+  background-color: #ffffff;
+}
+
+.tattoo h1 {
+  text-align: center;
+  color: #F8133c;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tattoo p {
+  text-align: center;
+  margin-bottom: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.artists1 {
+  display: flex;
+  justify-content: space-around;
+}
+.artistcards {
+  height: 500px;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+  transition: box-shadow 1s ease, transform 1s ease;
+}
+
+.artistcards:hover {
+  transform: scale(1.15);
+}
+
+.artistcards img {
+  height: 250px;
+  width: 250px;
+}
+
+.artistcards h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.artistcards p {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-left: -10px;
+}
+/* CSS to style the Artist Page layout */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: #130303;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0e0505;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between the grid items */
+  grid-auto-rows: 1fr; /* Ensure cards have equal height */
+}
+
+.artist-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 300px; /* Set a fixed height for images */
+  object-fit: cover; /* Make sure images fill the space properly */
+  border-radius: 8px;
+}
+
+.artist-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons span {
+  font-size: 1.5rem;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-grid {
+    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+  }
+}
+
+/* Portfolio */
+
+.PortfilioComp-Conatiner{
+  background:rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  color: rgb(0, 0, 0);
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.PortfilioComp-Conatiner img{
+  width: 400px;
+  height: 500px;
+
+}
+.PortfilioComp-Conatiner h1 {
+  font-size: 40px;         
+  text-transform: uppercase; 
+  font-weight: 900;            
+  margin-bottom: 20px;  
+  margin-top: 30px;      
+}
+
+.PortfilioComp-Conatiner p{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-left: -0px;
+}
+.PortfilioComp-Conatiner button{
+  background-color: #f8133c;
+  color: rgb(255, 255, 255);
+  border: none;
+  width: 250px;
+  height: 70px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  margin-top: 30px;
+}
+.PortfilioComp-Conatiner button:hover{
+  transform:scale(1.01);
+}
+
+/* Footer styles */
+/* General footer styling */
+.footer {
+  margin-top: 100px;
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Footer Logo Section */
+.footer-logo {
+  width: 300px;
+}
+
+.footer-logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Footer Pages Section */
+.footer-pages h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white; /* Ensure the default color of the links is white */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-pages h1:hover {
+  color: #ff6347; /* Change color to tomato on hover */
+  cursor: pointer; /* Change cursor on hover to indicate clickability */
+}
+
+.footer-pages a {
+  text-decoration: none; /* Ensure no underline on the links */
+  color: white; /* Default color */
+}
+
+.footer-pages a:hover {
+  color: #ff6347; /* Apply hover effect */
+}
+
+/* Footer Location Section */
+.footer-location h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.location-item {
+  margin-bottom: 10px;
+  margin-left: -60px;
+}
+
+.location-item p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Footer Social Section */
+.footer-social h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6347;
+}
+
+/* Media Queries */
+
+/* For tablet devices (600px and below) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-pages,
+  .footer-location,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+
+  .footer-pages h1,
+  .footer-location h1,
+  .footer-social h1 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
+
+/* For mobile devices (400px and below) */
+@media (max-width: 480px) {
+  .footer-logo h1 {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .footer-logo p {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+
+  .footer-pages h1 {
+    font-size: 14px;
+  }
+
+  .footer-location h1 {
+    font-size: 14px;
+  }
+
+  .location-item p {
+    font-size: 12px;
+  }
+
+  .footer-social h1 {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
+
+
+
+/* Cart Page */
+.cart {
+  padding: 50px;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.cart-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cart-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cart-item .price {
+  font-size: 16px;
+  color: #f8133c;
+}
+
+.cart-item .remove-btn {
+  padding: 8px 16px;
+  background-color: #ff002f;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.cart-item .remove-btn:hover {
+  background-color: #e5533d;
+}
+
+/* Profile Page */
+/* Profile Heading */
+.profile-heading {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+/* Profile Section */
+.profile-page {
+  margin: 20px;
+}
+
+.profile-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Profile Image */
+.profile-img {
+  flex: 1;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Profile Body */
+.profile-body {
+  flex: 2;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Profile Information */
+.profile-info {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.profile-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Profile Buttons */
+.profile-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.change-details-btn, .logout-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  width: 200px;
+}
+
+.change-details-btn:hover, .logout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Loading and Error Messages */
+.loading, .error {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.loading {
+  color: #5bc0de;
+}
+
+.error {
+  color: #d9534f;
+}
+/* table */
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+  .table th,
+  .table td {
+    font-size: 12px;  /* Smaller font size */
+  }
+
+  .table img {
+    width: 40px;   /* Smaller image */
+    height: 40px;
+  }
+
+  .table td {
+    padding: 8px;   /* Reduced padding for better space utilization */
+  }
+
+  .btn {
+    font-size: 12px;   /* Smaller font size for buttons */
+    padding: 5px 10px;  /* Adjust button padding */
+  }
+
+  .btn-sm {
+    padding: 3px 8px;   /* Adjust small buttons for mobile */
+  }
+}

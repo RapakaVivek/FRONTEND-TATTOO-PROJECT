@@ -1,0 +1,18 @@
+.slick-slide > div{
+    margin:  0 10px;
+    border-radius: 10px;
+}
+
+#testimonials{
+    background: rgba(228, 227, 227, 0.555);
+}
+.testnomialsh1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 150px;          /* Margin at the top */
+    margin-bottom: 20px;        /* Margin at the bottom */
+    text-transform: uppercase;  /* Uppercase text */
+    font-weight: 900;           /* Very bold text */
+    color: #f8133c;             /* Pinkish color */
+  }
+  
